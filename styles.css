@@ -1,0 +1,181 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family:Times, sans-serif;
+}
+:root{
+    --subtitle-description: grey;
+    --main-price-button: rgb(54, 107, 85);
+    --button-hover: rgb(40, 77, 68);
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f1e9db;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#outer-tile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 47vw;
+    border-radius: 3px;
+    
+}
+
+.inner-tile{
+    width:45vw;
+    height: 45vh;
+   
+}
+
+#left-tile{
+background-image: url("images/image-product-desktop.jpg");
+background-size: cover;
+background-position: center;
+border-bottom-left-radius: 10px;
+border-top-left-radius: 10px;
+}
+
+#right-tile{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-around;
+    
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 37px;
+    padding-right: 37px;
+    text-align: left;
+    margin: 0 auto;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#item-desc,#title,#old-price{
+    color: var(--subtitle-description);
+}
+h1,#old-price,#current-price{
+    font-family: 'Fraunces';
+}
+#item-desc,#title,#add-button{
+    font-family: 'Montserrat',sans-serif;
+}
+
+#title{
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.4rem;
+}
+h1{
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: bolder;
+    padding-right: 3rem;
+}
+#item-desc{
+    font-size: 0.88rem;
+}
+#old-price{
+    font-size: 0.8rem;
+    text-decoration: line-through;
+}
+
+#current-price{
+    color: var(--main-price-button);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#prices{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: left;
+    gap: 2rem;
+}
+
+#add-button{
+    height: 2.5rem;
+    width: 100%;
+    background-color: var(--main-price-button);
+    border-style: none;
+    border-radius: 0.3rem;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+}
+#cart-icon{
+    margin-right: 0.33rem;
+}
+#add-button:hover{
+    background-color: var(--button-hover);
+    cursor: pointer;
+}
+
+@media (max-width: 600px){
+    #outer-tile{
+        flex-direction: column;
+        width: 75vw;
+    }
+    .inner-tile{
+        width: 75vw;
+    }
+
+    #left-tile{
+        background-image: url("images/image-product-mobile.jpg");
+        height: 30vh;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    #right-tile{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 0 ;
+    }
+
+    #add-button{
+        margin-top: 1.2rem;
+        height: 3rem;
+    }
+}
+
+@media (max-width: 400px){
+    #left-tile{
+        height: 30vh;
+    }
+
+    .inner-tile{
+        height: 95vw;
+    }
+
+    #title,#item-desc{
+        font-size: 0.66rem;
+        
+    }
+    #item-desc{
+        margin-top: 4.1px;
+    }
+    h1{
+        font-size: 1.4rem;
+        line-height: 1.2rem;
+    }
+    #old-price{
+        font-size: 0.7rem;
+    }
+    #current-price{
+        font-size: 0.87rem;
+    }
+    
+}
